@@ -1,0 +1,378 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// ベーススタイル
+body{
+    font-size: 14px;
+    font-family: g.$font-family-jp;
+    color: g.$font-color-base;
+}
+span{
+    display: inline-block;
+}
+// PC
+@include mixin.mq("pc"){
+    body{
+        font-size: 16px;
+    }
+}
+
+// ブロックモジュール
+// コンテンツ幅
+.bl_cont_inner{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+// PC
+@include mixin.mq("pc"){
+    .bl_cont_inner{
+        width: 80%;
+    }
+}
+// 画像
+.bl_imgWrapper img{
+    width: 100%;
+}
+
+// ユニークモジュール
+.un_lb__reverse{
+    display: none;
+}
+@include mixin.mq("pc"){
+    .un_lb{
+        display: none;
+    }
+    .un_lb__reverse{
+        display: block;
+    }
+}
+@include mixin.mq("pc"){
+    .un_pcNone{
+        display: none;
+    }
+}
+
+
+
+// レイアウト
+.ly_cont{
+    padding: 80px 0 60px;
+}
+@include mixin.mq("pc"){
+    .ly_cont{
+        padding: 80px 0;
+    }
+}
+// セクションタイトル
+.ly_secTtl{
+    text-align: center;
+}
+// セクションタイトル2
+.ly_secTtl2{
+    text-align: center;
+}
+.ly_secTtl2_img{
+    margin-top: 24px;
+}
+// ctaボタン
+.ly_cta_btn{
+    margin-top: 24px;
+    overflow: hidden;
+}
+@include mixin.mq("pc"){
+    .ly_cta_btn{
+        margin-top: 0;
+    }
+}
+
+
+// ブロックモジュール
+// 背景色
+.bl_contBg_grey{
+    background: g.$bg-grey;
+}
+.bl_contBg_lightOrange{
+    background: g.$bg-light-orange;
+}
+.bl_contBg_orange{
+    background: g.$bg-orange;
+}
+
+// CTA
+// 全体
+.bl_cta{
+    padding: 35px 27px 43px;
+    border-radius: 16px;
+    background: g.$bg-white;
+    border: 3px solid g.$border-black;
+    position: relative;
+}
+@include mixin.mq("pc"){
+    .bl_cta{
+        padding: 67px;
+    }
+}
+// タイトル
+.bl_cta_ttl{
+    display: inline-block;
+    letter-spacing: 0.02em;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 150%;
+    text-shadow:
+        1px 1px 0 g.$border-white,
+        -1px -1px 0 g.$border-white,
+        -1px -1px 0 g.$border-white,
+        1px 1px 0 g.$border-white;
+    position: relative;
+    z-index: 2;
+}
+@include mixin.mq("pc"){
+    .bl_cta_ttl{
+        font-size: 40px;
+    }
+}
+// 画像
+.bl_cta_imgWrapper{
+    max-width: 390px;
+    display: block;
+    position: absolute;
+    top: -40px;
+    right: -8px;
+    z-index: 1;
+}
+@include mixin.mq("tab"){
+    .bl_cta_imgWrapper{
+        width: 50%;
+        top: auto;
+        bottom: -10px;
+        right: -37px;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+@include mixin.mq("pc"){
+    .bl_cta_imgWrapper{
+        width: 100%;
+        z-index: 0;
+    }
+}
+// テキスト群
+.bl_cta_txtGroup{
+    margin-top: 16px;
+}
+// テキスト
+.bl_cta_txt{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: 0.02em;
+    max-width: 550px;
+}
+// 電話・lineボタン群
+// PC時横並び
+.bl_cta_actionGroup{
+    margin-top: 24px;
+    position: relative;
+    z-index: 3;
+}
+@include mixin.mq("pc"){
+    .bl_cta_actionGroup{
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+}
+// 電話番号
+.bl_cta_tel{
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    font-family: g.$font-family-en;
+    color: g.$font-color-orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+.bl_cta_tel::before{
+    content: url(../img/cta_tel_ico.svg);
+}
+@include mixin.mq("tab"){
+    .bl_cta_tel{
+        justify-content: flex-start;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_cta_tel{
+        justify-content: center;
+        font-size: 48px;
+    }
+    .bl_cta_tel::before{
+        content: url(../img/cta_tel_ico_pc.svg);
+    }
+}
+// 受付時間
+.bl_cta_hour{
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+@include mixin.mq("tab"){
+    .bl_cta_hour{
+        text-align: left;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_cta_hour{
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+
+// エレメントモジュール
+// セクションタイトル
+.el_secTtl_en{
+    font-size: 24px;
+    color: g.$font-color-orange;
+    font-weight: 600;
+    font-family: g.$font-family-en;
+}
+.el_secTtl_jp{
+    margin-top: 8px;
+    font-size: 40px;
+    font-weight: bold;
+}
+@include mixin.mq("pc"){
+    .el_secTtl_en{
+        font-size: 24px;
+    }
+    .el_secTtl_jp{
+        font-size: 48px;
+    }
+}
+
+// セクションタイトル2
+.el_secTtl2{
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 165%;
+    letter-spacing: 0.04em;
+}
+.el_secTtl2_orange{
+    font-size: 40px;
+}
+.el_secTtl2_img{
+    width: 100%;
+    max-width: 520px;
+}
+@include mixin.mq("pc"){
+    .el_secTtl2{
+        font-size: 40px;
+    }
+    .el_secTtl2_orange{
+        font-size: 56px;
+    }
+}
+
+// ボタン
+.el_btn{
+    max-width: 350px;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    background: g.$bg-green;
+    box-shadow: 0 4px 0 g.$shadow-green;
+    color: g.$font-color-white;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    border-radius: 8px;
+    flex-shrink: 0;
+    transition: all 0.3s;
+
+    img{
+        display: block;
+    }
+}
+.el_btn::after{
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid g.$border-white;
+    border-right: 2px solid g.$border-white;
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+.el_btn__kv{
+    max-width: 600px;
+    box-shadow: none;
+}
+@include mixin.mq("pc"){
+    .el_btn{
+        padding: 18px 24px;
+    }
+    .el_btn:hover{
+        box-shadow: none;
+        transform: translateY(4px);
+    }
+    .el_btn__kv{
+        width: 30%;
+    }
+    .el_btn:hover{
+        box-shadow: none;
+        transform: translateY(4px);
+    }
+}
+
+// CTA
+.el_btn_cta{
+    display: inline-block;
+    padding: 16px 20px;
+    background: g.$bg-green;
+    color: g.$font-color-white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    // box-shadow: 0 6px 0 g.$shadow-green;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    transition: all 0.3s;
+}
+.el_btn_cta::after{
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid g.$border-white;
+    border-right: 2px solid g.$border-white;
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+.el_btn_cta:hover{
+    opacity: 0.7;
+}
+@include mixin.mq("pc"){
+    .el_btn_cta{
+        padding: 20px 24px;
+        font-size: 24px;
+    }
+    .el_btn_cta:hover{
+        box-shadow: none;
+        transform: translateY(4px);
+    }
+}

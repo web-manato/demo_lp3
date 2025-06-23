@@ -1,0 +1,165 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// レイアウト
+.ly_header{
+    width: 100%;
+    padding: 12px 0;
+}
+@include mixin.mq("pc"){
+    .ly_header{
+        padding: 16px 0;
+    }
+}
+
+
+// ブロックモジュール
+.bl_header{
+    background: g.$bg-light-orange;
+}
+.bl_header_inner{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1366px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// ロゴ
+.bl_header_logo{
+    img{
+        width: 100%;
+    }
+}
+
+// sp
+// ボタン類
+.bl_header_btnGroup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+// 電話相談ボタン
+.bl_header_btn_tel_sp{
+    display: inline-block;
+    font-size: 11px;
+    color: g.$font-color-white;
+    font-weight: 600;
+    padding: 10px;
+    background: g.$bg-orange;
+    border-radius: 8px;
+    box-shadow: 0 2px 0 g.$shadow-orange;
+
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+    .bl_header_btn_tel_sp_txt{
+        text-align: center;
+        margin-top: 7px;
+    }
+}
+// LINEボタン
+.bl_header_btn_line_sp{
+    display: inline-block;
+    font-size: 11px;
+    color: g.$font-color-white;
+    font-weight: 600;
+    padding: 10px;
+    background: g.$bg-green;
+    border-radius: 8px;
+    box-shadow: 0 2px 0 g.$shadow-green;
+
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+    .bl_header_btn_line_sp_txt{
+        text-align: center;
+    }
+}
+// sp時非表示
+.bl_header_btn_tel_pc,
+.bl_header_btn_line_pc{
+    display: none;
+}
+
+
+
+
+
+
+@include mixin.mq("pc"){
+    // spボタン非表示
+    .bl_header_btn_tel_sp,
+    .bl_header_btn_line_sp{
+        display: none;
+    }
+    // pc時表示
+    .bl_header_btn_tel_pc,
+    .bl_header_btn_line_pc{
+        display: block;
+    }
+
+    // ボタン類
+    .bl_header_btnGroup{
+        gap: 48px;
+    }
+
+    // 電話番号
+    .bl_header_btn_tel_pc{
+        flex-shrink: 0;
+
+        // 上部テキスト
+        .bl_header_btn_tel_pcGroup{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+
+            .bl_header_btn_tel_pc_number{
+                font-size: 32px;
+                font-weight: 700;
+                letter-spacing: 0.01em;
+                font-family: g.$font-family-en;
+            }
+        }
+        // 下部テキスト
+        .bl_header_btn_tel_pc_txt{
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 4px;
+        }
+    }
+
+    // lineボタン
+    .bl_header_btn_line_pc{
+        padding: 18px 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 17px;
+        background: g.$bg-green;
+        box-shadow: 0 4px 0 g.$shadow-green;
+        color: g.$font-color-white;
+        font-size: 20px;
+        letter-spacing: 0.02em;
+        font-weight: 600;
+        border-radius: 8px;
+        flex-shrink: 0;
+        transition: all 0.3s;
+
+        img{
+            display: block;
+        }
+    }
+    // ホバー
+    .bl_header_btn_line_pc:hover{
+        box-shadow: none;
+        transform: translateY(4px);
+    }
+}

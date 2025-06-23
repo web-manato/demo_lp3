@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="http://www.google.com/s2/favicons?domain=ファビコンを取得したいサイトURL">
+    <link rel="apple-touch-icon-precomposed" href="画像のURL" />
+    <meta name="msapplication-TileImage" content="画像のURL" />
+    <meta name="msapplication-TileColor" content="カラーコード（例：#F89174）"/>
+    <title>デモページ</title>
+    <meta name="description" content="まなとが制作したLPデモです。">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+
+    <!-- js -->
+    <script src="js/main.js" type="module"></script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header class="ly_header bl_header">
+        <div class="bl_header_inner">
+
+            <!-- ロゴ -->
+            <h1 class="bl_header_logo">
+                <img src="img/logo.svg" alt="ManatoDemo">
+            </h1>
+
+
+            <!-- ヘッダー内ボタン群 -->
+            <div class="bl_header_btnGroup">
+
+                <!-- 電話ボタン -->
+                <div class="bl_header_btn_tel">
+                    <!-- スマホ -->
+                    <a href="tel:000-0000-0000" class="bl_header_btn_tel_sp">
+                        <img src="img/tel_ico.svg" alt="">
+                        <div class="bl_header_btn_tel_sp_txt">電話相談</div>
+                    </a>
+                    <!-- pc -->
+                    <div class="bl_header_btn_tel_pc">
+                        <div class="bl_header_btn_tel_pcGroup">
+                            <img src="img/tel_ico_black.svg" alt="">
+                            <p class="bl_header_btn_tel_pc_number">000-123-4567</p>
+                        </div>
+                        <p class="bl_header_btn_tel_pc_txt">
+                            受付時間：9:00～18:00 (土日祝休み)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- lineボタン -->
+                <div class="bl_header_btn_line">
+                    <!-- スマホ -->
+                    <a href="#" class="bl_header_btn_line_sp">
+                        <img src="img/line_ico.svg" alt="">
+                        <div class="bl_header_btn_line_sp_txt">LINE相談</div>
+                    </a>
+                    <!-- pc -->
+                    <a href="#" class="bl_header_btn_line_pc">
+                        <img src="img/line_ico.svg" alt="">
+                        <div class="bl_header_btn_line_pc_txt">LINEで無料相談する</div>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- キービジュアル -->
+        <section class="ly_kv bl_kv">
+            <div class="bl_kv_inner">
+
+                <!-- メインコピー -->
+                <h2 class="bl_kv_mainCopy_group">
+                    <span class="bl_kv_mainCopy_orange un_fontColor_orange">個人専門の税理士</span><!--
+                    -->が、あなたの状況に適した<!--
+                    --><span class="bl_kv_mainCopy_underLine">確定申告をご提案</span>
+                </h2>
+
+                <!-- ポイント -->
+                <ul class="bl_kv_pointGroup">
+                    <!-- ポイント1 -->
+                    <li class="bl_kv_point">
+                        <div class="bl_kv_point_body">
+                            <p class="bl_kv_point_txt">
+                                合計<br class="un_lb">
+                                相談件数
+                            </p>
+                            <p class="bl_kv_point_txt2 bl_kv_point_txt2__annotation">
+                                <span class="bl_kv_point_txt2_orange un_fontColor_orange">300</span><!--
+                                -->件以上
+                            </p>
+                        </div>
+                    </li>
+                    <!-- ポイント2 -->
+                    <li class="bl_kv_point">
+                        <div class="bl_kv_point_body">
+                            <p class="bl_kv_point_txt">
+                                経験豊富な<br>
+                                税理士
+                            </p>
+                            <p class="bl_kv_point_txt2">
+                                <span class="bl_kv_point_txt2_orange un_fontColor_orange">10</span><!--
+                                -->人以上
+                            </p>
+                        </div>
+                    </li>
+                    <!-- ポイント3 -->
+                    <li class="bl_kv_point">
+                        <div class="bl_kv_point_body">
+                            <p class="bl_kv_point_txt">
+                                Google<br class="un_lb__reverse">口コミ評価<br class="un_lb">
+                                <span class="un_pcNone">42件の口コミ</span>
+                            </p>
+                            <p class="bl_kv_point_txt2">
+                                <span class="bl_kv_point_txt2_orange un_fontColor_orange">5<span class="bl_kv_point_txt2_orange_small_pc">/5</span></span><!--
+                                -->点
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 注釈 -->
+                <p class="bl_kv_point_annotation">※2025年6月2日時点</p>
+
+                <!-- kv画像 -->
+                <picture class="bl_kv_img">
+                    <source media="(max-width: 400px)" srcset="img/kv_img-1000px.png">
+                    <source media="(max-width: 500px)" srcset="img/kv_img-1500px.png">
+                    <source media="(max-width: 768px)" srcset="img/kv_img-2000px.png">
+                    <source media="(max-width: 1080px)" srcset="img/kv_img-2500px.png">
+                    <source media="(max-width: 2000px)" srcset="img/kv_img-3000px.png">
+                    <img src="img/kv_img-3500px.png" alt="">
+                </picture>
+
+                <!-- lineボタン -->
+                <div class="bl_kv_btnWrapper">
+                    <a href="#" class="el_btn el_btn__kv">
+                        <img src="img/line_ico.svg" alt="">
+                        LINEで無料相談する
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- こんなお悩みはありませんか -->
+        <section class="ly_cont bl_contBg_grey">
+            <div class="bl_cont_inner">
+
+                <!-- セクションタイトル -->
+                <div class="ly_secTtl2">
+                    <h2 class="el_secTtl2 js-fadeIn">
+                        確定申告でこんな<br>お悩みありませんか？
+                    </h2>
+                    <!-- 画像 -->
+                    <div class="ly_secTtl2_img">
+                        <img src="img/secTtl2_decoImg.svg" alt="" class="el_secTtl2_img">
+                    </div>
+                </div>
+
+                <!-- コンテンツ -->
+                <ul class="bl_worriers_group">
+                    <!-- お悩み1 -->
+                    <li class="bl_worriers js-fadeIn">
+                        <!-- 画像 -->
+                        <picture class="bl_worriers_img">
+                            <source media="(max-width: 400px)" srcset="img/worriers_img-1000px.png">
+                            <source media="(max-width: 500px)" srcset="img/worriers_img-1500px.png">
+                            <source media="(max-width: 768px)" srcset="img/worriers_img-2000px.png">
+                            <source media="(max-width: 1080px)" srcset="img/worriers_img-2500px.png">
+                            <source media="(max-width: 2000px)" srcset="img/worriers_img-3000px.png">
+                            <img src="img/worriers_img-3500px.png" alt="">
+                        </picture>
+                        <!-- テキスト -->
+                        <div class="bl_worriers_txtGroup">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="img/speechBubble.svg">
+                                <img src="img/speechBubble_pc.svg" alt="">
+                            </picture>
+                            <p class="bl_worriers_txt">親譲りの無鉄砲で小供の時から</p>
+                        </div>
+                    </li>
+                    <!-- お悩み2 -->
+                    <li class="bl_worriers js-fadeIn">
+                        <!-- 画像 -->
+                        <picture class="bl_worriers_img">
+                            <source media="(max-width: 400px)" srcset="img/worriers_img-1000px.png">
+                            <source media="(max-width: 500px)" srcset="img/worriers_img-1500px.png">
+                            <source media="(max-width: 768px)" srcset="img/worriers_img-2000px.png">
+                            <source media="(max-width: 1080px)" srcset="img/worriers_img-2500px.png">
+                            <source media="(max-width: 2000px)" srcset="img/worriers_img-3000px.png">
+                            <img src="img/worriers_img-3500px.png" alt="">
+                        </picture>
+                        <!-- テキスト -->
+                        <div class="bl_worriers_txtGroup">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="img/speechBubble.svg">
+                                <img src="img/speechBubble_pc.svg" alt="">
+                            </picture>
+                            <p class="bl_worriers_txt bl_worriers_txt__reverse">親譲りの無鉄砲で小供の時から</p>
+                        </div>
+                    </li>
+                    <!-- お悩み3 -->
+                    <li class="bl_worriers js-fadeIn">
+                        <!-- 画像 -->
+                        <picture class="bl_worriers_img">
+                            <source media="(max-width: 400px)" srcset="img/worriers_img-1000px.png">
+                            <source media="(max-width: 500px)" srcset="img/worriers_img-1500px.png">
+                            <source media="(max-width: 768px)" srcset="img/worriers_img-2000px.png">
+                            <source media="(max-width: 1080px)" srcset="img/worriers_img-2500px.png">
+                            <source media="(max-width: 2000px)" srcset="img/worriers_img-3000px.png">
+                            <img src="img/worriers_img-3500px.png" alt="">
+                        </picture>
+                        <!-- テキスト -->
+                        <div class="bl_worriers_txtGroup">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="img/speechBubble.svg">
+                                <img src="img/speechBubble_pc.svg" alt="">
+                            </picture>
+                            <p class="bl_worriers_txt">親譲りの無鉄砲で小供の時から</p>
+                        </div>
+                    </li>
+                    <!-- お悩み4 -->
+                    <li class="bl_worriers js-fadeIn">
+                        <!-- 画像 -->
+                        <picture class="bl_worriers_img">
+                            <source media="(max-width: 400px)" srcset="img/worriers_img-1000px.png">
+                            <source media="(max-width: 500px)" srcset="img/worriers_img-1500px.png">
+                            <source media="(max-width: 768px)" srcset="img/worriers_img-2000px.png">
+                            <source media="(max-width: 1080px)" srcset="img/worriers_img-2500px.png">
+                            <source media="(max-width: 2000px)" srcset="img/worriers_img-3000px.png">
+                            <img src="img/worriers_img-3500px.png" alt="">
+                        </picture>
+                        <!-- テキスト -->
+                        <div class="bl_worriers_txtGroup">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="img/speechBubble.svg">
+                                <img src="img/speechBubble_pc.svg" alt="">
+                            </picture>
+                            <p class="bl_worriers_txt bl_worriers_txt__reverse">親譲りの無鉄砲で小供の時から</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="bl_secChange" aria-hidden="true">
+            <img src="img/secChange.svg" alt="">
+        </div>
+
+
+        <!-- 私たちが解決します -->
+        <section class="ly_cont bl_contBg_lightOrange">
+            <div class="bl_cont_inner">
+
+                <!-- セクションタイトル -->
+                <div class="ly_secTtl2">
+                    <h2 class="el_secTtl2 js-fadeIn">
+                        私たちが<!--
+                        --><span class="el_secTtl2_orange un_fontColor_orange">解決</span><!--
+                        -->します！
+                    </h2>
+                    <!-- 画像 -->
+                    <div class="ly_secTtl2_img">
+                        <img src="img/secTtl2_decoImg.svg" alt="" class="el_secTtl2_img">
+                    </div>
+                </div>
+
+                <!-- コンテンツ -->
+                <ul class="bl_solutionGroup">
+
+                    <!-- ポイント1 -->
+                    <li class="bl_solution js-fadeIn">
+                        <!-- 数字バッジ -->
+                        <div class="bl_solution_numberGroup">
+                            <!-- 強調線 -->
+                            <div class="bl_solution_number_lineGroup">
+                                <span class="bl_solution_number_line"></span>
+                                <span class="bl_solution_number_line2"></span>
+                                <span class="bl_solution_number_line3"></span>
+                            </div>
+                            <p class="bl_solution_number">01</p>
+                        </div>
+                        <!-- 画像 -->
+                        <div class="bl_solution_img">
+                            <img src="img/solution_img.svg" alt="">
+                        </div>
+                        <!-- テキスト類 -->
+                        <div class="bl_solution_txtGroup">
+                            <h3 class="bl_solution_ttl">親身な対応</h3>
+                            <p class="bl_solution_txt">親譲りの無鉄砲で小供の時から損ばかりしている</p>
+                        </div>
+                    </li>
+
+                    <!-- ポイント2 -->
+                    <li class="bl_solution js-fadeIn">
+                        <!-- 数字バッジ -->
+                        <div class="bl_solution_numberGroup">
+                            <!-- 強調線 -->
+                            <div class="bl_solution_number_lineGroup">
+                                <span class="bl_solution_number_line"></span>
+                                <span class="bl_solution_number_line2"></span>
+                                <span class="bl_solution_number_line3"></span>
+                            </div>
+                            <p class="bl_solution_number">02</p>
+                        </div>
+                        <!-- 画像 -->
+                        <div class="bl_solution_img">
+                            <img src="img/solution_img2.svg" alt="">
+                        </div>
+                        <!-- テキスト類 -->
+                        <div class="bl_solution_txtGroup">
+                            <h3 class="bl_solution_ttl">適切なご提案</h3>
+                            <p class="bl_solution_txt">親譲りの無鉄砲で小供の時から損ばかりしている</p>
+                        </div>
+                    </li>
+
+                    <!-- ポイント3 -->
+                    <li class="bl_solution js-fadeIn">
+                        <!-- 数字バッジ -->
+                        <div class="bl_solution_numberGroup">
+                            <!-- 強調線 -->
+                            <div class="bl_solution_number_lineGroup">
+                                <span class="bl_solution_number_line"></span>
+                                <span class="bl_solution_number_line2"></span>
+                                <span class="bl_solution_number_line3"></span>
+                            </div>
+                            <p class="bl_solution_number">03</p>
+                        </div>
+                        <!-- 画像 -->
+                        <div class="bl_solution_img">
+                            <img src="img/solution_img3.svg" alt="">
+                        </div>
+                        <!-- テキスト類 -->
+                        <div class="bl_solution_txtGroup">
+                            <h3 class="bl_solution_ttl">丁寧な説明</h3>
+                            <p class="bl_solution_txt">親譲りの無鉄砲で小供の時から損ばかりしている</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- サービス -->
+        <section class="ly_cont">
+            <div class="bl_cont_inner bl_cont_inner__service">
+
+                <!-- セクションタイトル -->
+                <div class="ly_secTtl">
+                    <span class="el_secTtl_en">Service</span>
+                    <h2 class="el_secTtl_jp">サービス</h2>
+                </div>
+
+                <!-- コンテンツ -->
+                <ul class="bl_serviceGroup">
+
+                    <!-- 確定申告コンサルティング -->
+                    <li class="bl_service">
+                        <!-- タイトル -->
+                        <div class="ly_service_ttl">
+                            <span class="bl_service_ttl_number">01</span>
+                            <span class="bl_service_ttl_line"></span>
+                            <h3 class="bl_service_ttl">確定申告コンサルティング</h3>
+                        </div>
+                        <!-- リスト内リスト -->
+                        <ul class="bl_service_list">
+
+                            <!-- ポイント1 -->
+                            <li class="bl_service_listItem">
+                                <!-- 画像 -->
+                                <picture class="bl_service_listItem_img js-fadeIn">
+                                    <source media="(max-width: 400px)" srcset="img/service_img1-1-1000px.png">
+                                    <source media="(max-width: 500px)" srcset="img/service_img1-1-1500px.png">
+                                    <source media="(max-width: 768px)" srcset="img/service_img1-1-2000px.png">
+                                    <source media="(max-width: 1080px)" srcset="img/service_img1-1-2500px.png">
+                                    <source media="(max-width: 2000px)" srcset="img/service_img1-1-3000px.png">
+                                    <img src="img/service_img1-1-3500px.png" alt="">
+                                </picture>
+                                <!-- テキスト類 -->
+                                <div class="bl_service_listItem_txtGroup">
+                                    <h4 class="bl_service_listItem_ttl">過去の収入から比較</h4>
+                                    <p class="bl_service_listItem_txt">親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。</p>
+                                </div>
+                                <!-- 区切り線 -->
+                                <span class="bl_service_listItem_line"></span>
+                            </li>
+
+                            <!-- ポイント2 -->
+                            <li class="bl_service_listItem">
+                                <!-- 画像 -->
+                                <picture class="bl_service_listItem_img js-fadeIn">
+                                    <source media="(max-width: 400px)" srcset="img/service_img1-2-1000px.png">
+                                    <source media="(max-width: 500px)" srcset="img/service_img1-2-1500px.png">
+                                    <source media="(max-width: 768px)" srcset="img/service_img1-2-2000px.png">
+                                    <source media="(max-width: 1080px)" srcset="img/service_img1-2-2500px.png">
+                                    <source media="(max-width: 2000px)" srcset="img/service_img1-2-3000px.png">
+                                    <img src="img/service_img1-2-3500px.png" alt="">
+                                </picture>
+                                <!-- テキスト類 -->
+                                <div class="bl_service_listItem_txtGroup">
+                                    <h4 class="bl_service_listItem_ttl">確定申告シミュレーション</h4>
+                                    <p class="bl_service_listItem_txt">親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。</p>
+                                </div>
+                                <!-- 区切り線 -->
+                                <span class="bl_service_listItem_line"></span>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- 申告 -->
+                    <li class="bl_service">
+                        <!-- タイトル -->
+                        <div class="ly_service_ttl">
+                            <span class="bl_service_ttl_number">02</span>
+                            <span class="bl_service_ttl_line"></span>
+                            <h3 class="bl_service_ttl">申告</h3>
+                        </div>
+                        <!-- リスト内リスト -->
+                        <ul class="bl_service_list">
+
+                            <!-- ポイント1 -->
+                            <li class="bl_service_listItem">
+                                <!-- 画像 -->
+                                <picture class="bl_service_listItem_img js-fadeIn">
+                                    <source media="(max-width: 400px)" srcset="img/service_img2-1-1000px.png">
+                                    <source media="(max-width: 500px)" srcset="img/service_img2-1-1500px.png">
+                                    <source media="(max-width: 768px)" srcset="img/service_img2-1-2000px.png">
+                                    <source media="(max-width: 1080px)" srcset="img/service_img2-1-2500px.png">
+                                    <source media="(max-width: 2000px)" srcset="img/service_img2-1-3000px.png">
+                                    <img src="img/service_img2-1-3500px.png" alt="">
+                                </picture>
+                                <!-- テキスト類 -->
+                                <div class="bl_service_listItem_txtGroup">
+                                    <h4 class="bl_service_listItem_ttl">申告時のサポート</h4>
+                                    <p class="bl_service_listItem_txt">親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。</p>
+                                </div>
+                                <!-- 区切り線 -->
+                                <span class="bl_service_listItem_line"></span>
+                            </li>
+
+                            <!-- ポイント2 -->
+                            <li class="bl_service_listItem">
+                                <!-- 画像 -->
+                                <picture class="bl_service_listItem_img js-fadeIn">
+                                    <source media="(max-width: 400px)" srcset="img/service_img2-2-1000px.png">
+                                    <source media="(max-width: 500px)" srcset="img/service_img2-2-1500px.png">
+                                    <source media="(max-width: 768px)" srcset="img/service_img2-2-2000px.png">
+                                    <source media="(max-width: 1080px)" srcset="img/service_img2-2-2500px.png">
+                                    <source media="(max-width: 2000px)" srcset="img/service_img2-2-3000px.png">
+                                    <img src="img/service_img2-2-3500px.png" alt="">
+                                </picture>
+                                <!-- テキスト類 -->
+                                <div class="bl_service_listItem_txtGroup">
+                                    <h4 class="bl_service_listItem_ttl">電子帳簿保存もサポート</h4>
+                                    <p class="bl_service_listItem_txt">親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。</p>
+                                </div>
+                                <!-- 区切り線 -->
+                                <span class="bl_service_listItem_line"></span>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- その他 -->
+                    <li class="bl_service">
+                        <!-- タイトル -->
+                        <div class="ly_service_ttl">
+                            <span class="bl_service_ttl_number">03</span>
+                            <span class="bl_service_ttl_line"></span>
+                            <h3 class="bl_service_ttl">その他</h3>
+                        </div>
+                        <!-- リスト内リスト -->
+                        <ul class="bl_service_list">
+
+                            <!-- ポイント1 -->
+                            <li class="bl_service_listItem">
+                                <!-- 画像 -->
+                                <picture class="bl_service_listItem_img js-fadeIn">
+                                    <source media="(max-width: 400px)" srcset="img/service_img3-1-1000px.png">
+                                    <source media="(max-width: 500px)" srcset="img/service_img3-1-1500px.png">
+                                    <source media="(max-width: 768px)" srcset="img/service_img3-1-2000px.png">
+                                    <source media="(max-width: 1080px)" srcset="img/service_img3-1-2500px.png">
+                                    <source media="(max-width: 2000px)" srcset="img/service_img3-1-3000px.png">
+                                    <img src="img/service_img3-1-3500px.png" alt="">
+                                </picture>
+                                <!-- テキスト類 -->
+                                <div class="bl_service_listItem_txtGroup">
+                                    <h4 class="bl_service_listItem_ttl">必要に応じて各専門家をご紹介</h4>
+                                    <p class="bl_service_listItem_txt">親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。</p>
+                                </div>
+                                <!-- 区切り線 -->
+                                <span class="bl_service_listItem_line"></span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- お客様の声 -->
+        <section class="ly_cont bl_contBg_lightOrange">
+            <div class="bl_cont_inner">
+
+                <!-- セクションタイトル -->
+                <div class="ly_secTtl">
+                    <span class="el_secTtl_en">Voice</span>
+                    <h2 class="el_secTtl_jp">お客様の声</h2>
+                </div>
+
+                <!-- コンテンツ -->
+                <ul class="bl_voiceGroup">
+
+                    <!-- お客様の声1 -->
+                    <li class="bl_voice js-fadeIn">
+                        <!-- ラベル -->
+                        <span class="bl_voice_label">確定申告</span>
+                        <!-- タイトル群 -->
+                        <div class="bl_voice_ttlGroup">
+                            <!-- アイコン -->
+                            <div class="bl_voice_ttlGroup_img">
+                                <img src="img/voices_ico.svg" alt="">
+                                <p class="bl_voice_ttlGroup_img_status">40代・男性</p>
+                            </div>
+                            <!-- タイトル -->
+                            <h3 class="bl_voice_ttl">個別の事情に寄り添ってアドバイスしてくれました</h3>
+                        </div>
+                        <!-- テキスト類 -->
+                        <p class="bl_voice_txt">
+                            親譲りの無鉄砲で小供の時から損ばかりしている。<br>
+                            小学校に居る時分学校の二階から飛び降りて<!--
+                            --><span class="bl_voice_txt_underLine">一週間ほど腰を抜かした事がある。</span>
+                            なぜそんな無闇をしたと聞く人があるかも知れぬ。<!--
+                            --><span class="bl_voice_txt_underLine">別段深い理由でもない。</span>
+                        </p>
+                    </li>
+
+                    <!-- お客様の声2 -->
+                    <li class="bl_voice js-fadeIn">
+                        <!-- ラベル -->
+                        <span class="bl_voice_label">確定申告</span>
+                        <!-- タイトル群 -->
+                        <div class="bl_voice_ttlGroup">
+                            <!-- アイコン -->
+                            <div class="bl_voice_ttlGroup_img">
+                                <img src="img/voices_ico.svg" alt="">
+                                <p class="bl_voice_ttlGroup_img_status">40代・男性</p>
+                            </div>
+                            <!-- タイトル -->
+                            <h3 class="bl_voice_ttl">個別の事情に寄り添ってアドバイスしてくれました</h3>
+                        </div>
+                        <!-- テキスト類 -->
+                        <p class="bl_voice_txt">
+                            親譲りの無鉄砲で小供の時から損ばかりしている。<br>
+                            小学校に居る時分学校の二階から飛び降りて<!--
+                            --><span class="bl_voice_txt_underLine">一週間ほど腰を抜かした事がある。</span>
+                            なぜそんな無闇をしたと聞く人があるかも知れぬ。<!--
+                            --><span class="bl_voice_txt_underLine">別段深い理由でもない。</span>
+                        </p>
+                    </li>
+
+                    <!-- お客様の声3 -->
+                    <li class="bl_voice js-fadeIn">
+                        <!-- ラベル -->
+                        <span class="bl_voice_label">確定申告</span>
+                        <!-- タイトル群 -->
+                        <div class="bl_voice_ttlGroup">
+                            <!-- アイコン -->
+                            <div class="bl_voice_ttlGroup_img">
+                                <img src="img/voices_ico.svg" alt="">
+                                <p class="bl_voice_ttlGroup_img_status">40代・男性</p>
+                            </div>
+                            <!-- タイトル -->
+                            <h3 class="bl_voice_ttl">個別の事情に寄り添ってアドバイスしてくれました</h3>
+                        </div>
+                        <!-- テキスト類 -->
+                        <p class="bl_voice_txt">
+                            親譲りの無鉄砲で小供の時から損ばかりしている。<br>
+                            小学校に居る時分学校の二階から飛び降りて<!--
+                            --><span class="bl_voice_txt_underLine">一週間ほど腰を抜かした事がある。</span>
+                            なぜそんな無闇をしたと聞く人があるかも知れぬ。<!--
+                            --><span class="bl_voice_txt_underLine">別段深い理由でもない。</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- CTA -->
+        <section class="ly_cont bl_contBg_orange">
+            <div class="bl_cont_inner">
+
+                <div class="bl_cta">
+                    <!-- タイトル -->
+                    <h2 class="bl_cta_ttl" data-text="お気軽にお問い合わせください">お気軽にお問い合わせください</h2>
+                    <!-- 画像 -->
+                    <picture class="bl_cta_imgWrapper">
+                        <source media="(max-width: 400px)" srcset="img/cta_img-1000px.png">
+                        <source media="(max-width: 500px)" srcset="img/cta_img-1500px.png">
+                        <source media="(max-width: 768px)" srcset="img/cta_img-2000px.png">
+                        <source media="(max-width: 1080px)" srcset="img/cta_img-2500px.png">
+                        <source media="(max-width: 2000px)" srcset="img/cta_img-3000px.png">
+                        <img src="img/cta_img-3500px.png" alt="お問い合わせ担当者" width="129" height="130">
+                    </picture>
+                    <!-- テキスト類 -->
+                    <div class="bl_cta_txtGroup">
+                        <!-- 本文 -->
+                        <p class="bl_cta_txt">
+                            親護りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。
+                        </p>
+                        <div class="bl_cta_actionGroup">
+                            <!-- 電話番号 -->
+                            <div class="bl_cta_telGroup">
+                                <p class="bl_cta_tel">000-123-4567</p>
+                                <p class="bl_cta_hour">受付時間：9:00〜18:00 (年中無休)</p>
+                            </div>
+                            <!-- ボタン -->
+                            <div class="ly_cta_btn">
+                                <a href="#" class="el_btn_cta">
+                                    <img src="img/line_ico.svg" alt="LINE">
+                                    LINEで無料相談する
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ご相談までの流れ -->
+        <section class="ly_cont">
+            <div class="bl_cont_inner">
+
+                <!-- セクションタイトル -->
+                <div class="ly_secTtl">
+                    <span class="el_secTtl_en">Flow</span>
+                    <h2 class="el_secTtl_jp el_secTtl_jp__small">ご相談までの<wbr/>流れ</h2>
+                </div>
+
+                <!-- コンテンツ -->
+                <ul class="bl_flowGroup js-fadeIn">
+                    <!-- ステップ1 -->
+                    <li class="bl_flow">
+                        <!-- 数字バッジ -->
+                        <div class="bl_flow_numberGroup">
+                            <p class="bl_flow_number">
+                                ステップ
+                                <span class="bl_flow_number_line"></span>
+                                01
+                            </p>
+                        </div>
+                        <!-- 画像 -->
+                        <div class="bl_flow_img">
+                            <img src="img/flow_img.svg" alt="">
+                        </div>
+                        <!-- テキスト類 -->
+                        <div class="bl_flow_txtGroup">
+                            <h3 class="bl_flow_ttl">お問い合わせ</h3>
+                            <span class="bl_flow_txtGroup_line"></span>
+                            <p class="bl_flow_txt">親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。</p>
+                        </div>
+                    </li>
+                    <!-- 矢印アイコン -->
+                    <span class="bl_flow_arrow"></span>
+
+                    <!-- ステップ2 -->
+                    <li class="bl_flow">
+                        <!-- 数字バッジ -->
+                        <div class="bl_flow_numberGroup">
+                            <p class="bl_flow_number">
+                                ステップ
+                                <span class="bl_flow_number_line"></span>
+                                02
+                            </p>
+                        </div>
+                        <!-- 画像 -->
+                        <div class="bl_flow_img">
+                            <img src="img/flow_img2.svg" alt="">
+                        </div>
+                        <!-- テキスト類 -->
+                        <div class="bl_flow_txtGroup">
+                            <h3 class="bl_flow_ttl">無料でご相談</h3>
+                            <span class="bl_flow_txtGroup_line"></span>
+                            <p class="bl_flow_txt">親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。</p>
+                        </div>
+                    </li>
+                    <!-- 矢印アイコン -->
+                    <span class="bl_flow_arrow"></span>
+
+                    <!-- ステップ3 -->
+                    <li class="bl_flow">
+                        <!-- 数字バッジ -->
+                        <div class="bl_flow_numberGroup">
+                            <p class="bl_flow_number">
+                                ステップ
+                                <span class="bl_flow_number_line"></span>
+                                03
+                            </p>
+                        </div>
+                        <!-- 画像 -->
+                        <div class="bl_flow_img">
+                            <img src="img/flow_img3.svg" alt="">
+                        </div>
+                        <!-- テキスト類 -->
+                        <div class="bl_flow_txtGroup">
+                            <h3 class="bl_flow_ttl">ご契約</h3>
+                            <span class="bl_flow_txtGroup_line"></span>
+                            <p class="bl_flow_txt">親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。</p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+
+        <!-- よくあるご質問 -->
+        <section class="ly_cont bl_contBg_lightOrange">
+            <div class="bl_cont_inner">
+
+                <!-- セクションタイトル -->
+                <div class="ly_secTtl">
+                    <span class="el_secTtl_en">FAQ</span>
+                    <h2 class="el_secTtl_jp">よくあるご質問</h2>
+                </div>
+
+                <!-- コンテンツ -->
+                <ul class="bl_faqGroup">
+                    <!-- 質問1 -->
+                    <li class="bl_faq js-fadeIn">
+                        <h3 class="bl_faq_question bl_faq_question__1line">費用はいくらですか？</h3>
+                        <p class="bl_faq_answer">回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。</p>
+                    </li>
+                    <!-- 質問2 -->
+                    <li class="bl_faq js-fadeIn">
+                        <h3 class="bl_faq_question">今まで何となくでやってきたため、何もわかりません。それでも大丈夫ですか？</h3>
+                        <p class="bl_faq_answer">回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。</p>
+                    </li>
+                    <!-- 質問1 -->
+                    <li class="bl_faq js-fadeIn">
+                        <h3 class="bl_faq_question">私の状況は少し複雑なのですが料金は変化しますか？</h3>
+                        <p class="bl_faq_answer">回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。</p>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+
+        <!-- 代表挨拶 -->
+        <section class="ly_cont">
+            <div class="bl_cont_inner">
+
+                <!-- セクションタイトル -->
+                <div class="ly_secTtl">
+                    <span class="el_secTtl_en">Message</span>
+                    <h2 class="el_secTtl_jp">代表挨拶</h2>
+                </div>
+
+                <div class="bl_president">
+                    <!-- 代表の写真 -->
+                    <picture class="bl_president_img">
+                        <source media="(max-width: 400px)" srcset="img/message_img-1000px.png">
+                        <source media="(max-width: 500px)" srcset="img/message_img-1500px.png">
+                        <source media="(max-width: 768px)" srcset="img/message_img-2000px.png">
+                        <source media="(max-width: 1080px)" srcset="img/message_img-2500px.png">
+                        <source media="(max-width: 2000px)" srcset="img/message_img-3000px.png">
+                        <img src="img/message_img-3500px.png" alt="代表取締役の写真">
+                    </picture>
+                    <!-- 本文 -->
+                    <div class="bl_president_body">
+                        <!-- タイトル -->
+                        <h3 class="bl_president_body_ttl">
+                            なんでもご相談ください。<br class="un_lb__reverse"><!--
+                            --><span class="bl_president_body_ttl_orange">お客様に寄り添って</span><br><!--
+                            -->対応いたします。
+                        </h3>
+                        <!-- テキスト -->
+                        <div class="bl_president_body_txtWrapper">
+                            <p class="bl_president_body_txt">
+                                親譲りの無鉄砲で小供の時から損ばかりしている。<br class="un_lb">
+                                小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。<br class="un_lb">
+                                なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。<br class="un_lb">
+                                新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 会社概要 -->
+        <section class="ly_cont bl_contBg_lightOrange">
+            <div class="bl_cont_inner">
+
+                <!-- セクションタイトル -->
+                <div class="ly_secTtl">
+                    <span class="el_secTtl_en">Company</span>
+                    <h2 class="el_secTtl_jp">会社概要</h2>
+                </div>
+
+                <!-- コンテンツ -->
+                <table class="bl_companyInfo">
+
+                    <!-- 事務所名 -->
+                    <tr>
+                        <th>事務所名</th>
+                        <td class="js-fadeIn">DemoManato税理士事務所</td>
+                    </tr>
+
+                    <!-- 代表者 -->
+                    <tr>
+                        <th>代表者</th>
+                        <td class="js-fadeIn">Demo Manato</td>
+                    </tr>
+
+                    <!-- 登録 -->
+                    <tr>
+                        <th>登録</th>
+                        <td class="js-fadeIn">テキストが入ります</td>
+                    </tr>
+
+                    <!-- 所属 -->
+                    <tr>
+                        <th>所属</th>
+                        <td class="js-fadeIn">テキストが入ります</td>
+                    </tr>
+
+                    <!-- 対応地域 -->
+                    <tr>
+                        <th>対応地域</th>
+                        <td class="js-fadeIn">親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。</td>
+                    </tr>
+
+                </table>
+
+            </div>
+        </section>
+
+
+        <!-- アクセス -->
+        <section class="ly_cont">
+
+            <!-- セクションタイトル -->
+            <div class="ly_secTtl">
+                <span class="el_secTtl_en">Access</span>
+                <h2 class="el_secTtl_jp">アクセス</h2>
+            </div>
+
+            <!-- コンテンツ -->
+            <div class="bl_cont_inner bl_cont_inner__access">
+                <!-- GoogleMap -->
+                <div class="bl_access_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3240.4931321160147!2d139.6916863!3d35.6894807!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cd4b71a37a1%3A0xf1665c37f38661e8!2z5p2x5Lqs6YO95bqB!5e0!3m2!1sja!2sjp!4v1750480822931!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- アクセス情報 -->
+
+                <!-- アクセス情報表 -->
+                <dl class="bl_access_info">
+
+                    <!-- 住所 -->
+                    <dt>住所</dt>
+                    <dd>
+                        〒598-0012<br>
+                        東京都江東区3-2-1 DemoManatoビル7階
+                    </dd>
+
+                    <!-- 最寄り駅 -->
+                    <dt>最寄り駅</dt>
+                    <dd>demo電鉄『manato駅』徒歩約5分</dd>
+
+                    <!-- 受付時間 -->
+                    <dt>受付時間</dt>
+                    <dd>9時～18時(年中無休)</dd>
+
+                    <!-- 電話番号 -->
+                    <dt>電話番号</dt>
+                    <dd>000-123-4567</dd>
+
+                </dl>
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="ly_cont bl_contBg_orange">
+            <div class="bl_cont_inner">
+
+                <div class="bl_cta">
+                    <!-- タイトル -->
+                    <h2 class="bl_cta_ttl" data-text="お気軽にお問い合わせください">お気軽にお問い合わせください</h2>
+                    <!-- 画像 -->
+                    <picture class="bl_cta_imgWrapper">
+                        <source media="(max-width: 400px)" srcset="img/cta_img-1000px.png">
+                        <source media="(max-width: 500px)" srcset="img/cta_img-1500px.png">
+                        <source media="(max-width: 768px)" srcset="img/cta_img-2000px.png">
+                        <source media="(max-width: 1080px)" srcset="img/cta_img-2500px.png">
+                        <source media="(max-width: 2000px)" srcset="img/cta_img-3000px.png">
+                        <img src="img/cta_img-3500px.png" alt="お問い合わせ担当者" width="129" height="130">
+                    </picture>
+                    <!-- テキスト類 -->
+                    <div class="bl_cta_txtGroup">
+                        <!-- 本文 -->
+                        <p class="bl_cta_txt">
+                            親護りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。
+                        </p>
+                        <div class="bl_cta_actionGroup">
+                            <!-- 電話番号 -->
+                            <div class="bl_cta_telGroup">
+                                <p class="bl_cta_tel">000-123-4567</p>
+                                <p class="bl_cta_hour">受付時間：9:00〜18:00 (年中無休)</p>
+                            </div>
+                            <!-- ボタン -->
+                            <div class="ly_cta_btn">
+                                <a href="#" class="el_btn_cta">
+                                    <img src="img/line_ico.svg" alt="LINE">
+                                    LINEで無料相談する
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="ly_footer bl_footer">
+        <div class="bl_footer_inner">
+
+            <!-- ロゴ -->
+            <div class="bl_footer_logo">
+                <img src="img/logo.svg" alt="ManatoDemo">
+            </div>
+
+            <!-- sns群 -->
+            <div class="bl_footer_snsGroup">
+                <!-- ホームページ -->
+                <a href="#" class="bl_footer_snsGroup_hp">DemoManato税理士事務所HP</a>
+                <!-- SNSアイコン -->
+                <div class="bl_footer_snsGroup_iconGroup">
+                    <!-- フェイスブック -->
+                    <div class="bl_footer_snsGroup_icon">
+                        <img src="img/facebook_ico.svg" alt="facebook">
+                    </div>
+                    <!-- X -->
+                    <div class="bl_footer_snsGroup_icon">
+                        <img src="img/x_ico.svg" alt="X">
+                    </div>
+                    <!-- インスタグラム -->
+                    <div class="bl_footer_snsGroup_icon">
+                        <img src="img/instagram_ico.svg" alt="instagram">
+                    </div>
+                </div>
+            </div>
+
+            <!-- コピーライト -->
+            <div class="bl_footer_copyRight_wrapper">
+                <small class="bl_footer_copyRight">&copy;2025 Demo Manato</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

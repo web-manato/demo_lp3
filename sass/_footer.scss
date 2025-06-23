@@ -1,0 +1,118 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// レイアウト
+.ly_footer{
+    width: 100%;
+    padding: 52px 34px;
+}
+@include mixin.mq("pc"){
+    .ly_footer{
+        padding: 24px 0;
+    }
+}
+
+
+// ブロックモジュール
+// インナー
+.bl_footer_inner{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@include mixin.mq("pc"){
+    .bl_footer_inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+}
+// 背景色
+.bl_footer{
+    background: g.$bg-grey;
+}
+// フッターロゴ
+.bl_footer_logo{
+    text-align: center;
+}
+// snsロゴ
+.bl_footer_snsGroup{
+    margin-top: 35px;
+}
+@include mixin.mq("pc"){
+    .bl_footer_snsGroup{
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
+}
+// ホームページ
+.bl_footer_snsGroup_hp{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    transition: all 0.3s;
+}
+.bl_footer_snsGroup_hp::after{
+    content: url(../img/footter_linkImg.svg);
+}
+.bl_footer_snsGroup_hp:hover{
+    opacity: 0.7;
+}
+// sns
+// グループ
+.bl_footer_snsGroup_iconGroup{
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+@include mixin.mq("pc"){
+    .bl_footer_snsGroup_iconGroup{
+        margin-top: 0;
+    }
+}
+// アイコン
+.bl_footer_snsGroup_icon{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: g.$bg-black;
+    position: relative;
+    transition: all 0.3s;
+
+    img{
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_footer_snsGroup_icon:hover{
+        opacity: 0.7;
+    }
+}
+
+// コピーライト
+.bl_footer_copyRight_wrapper{
+    text-align: center;
+    margin-top: 33px;
+}
+.bl_footer_copyRight{
+    font-size: 14px;
+    line-height: 175%;
+    letter-spacing: 0.07em;
+}
+@include mixin.mq("pc"){
+    .bl_footer_copyRight_wrapper{
+        margin-top: 0;
+    }
+}
