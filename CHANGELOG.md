@@ -5,6 +5,6 @@
 ### 修正内容
 -   **docs-** README.md、CHANGELOG.mdの追加、.htaccessの削除
 -   **feat-** meta情報修正、OGP設定
--   **perf-** ファイル名変更
+-   **perf-** ファイル名変更、WebP出し分けのためのHTML修正
 
 ---
