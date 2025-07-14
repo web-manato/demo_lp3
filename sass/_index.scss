@@ -99,6 +99,12 @@
     z-index: 2;
     max-width: 580px;
 }
+@include mixin.mq("tab") {
+    .bl_kv_pointGroup{
+        display: grid;
+        grid-template-columns: repeat(2,max-content);
+    }
+}
 @include mixin.mq("pc"){
     .bl_kv_pointGroup{
         grid-template-columns: repeat(3,1fr);
@@ -184,10 +190,16 @@
     max-width: 630px;
     bottom: 108px;
     right: -80px;
-    z-index: 0;
+    z-index: 1;
 
     img{
         width: 100%;
+    }
+}
+@include mixin.mq("tab") {
+    .bl_kv_img{
+        width: 50%;
+        right: 20px;
     }
 }
 @include mixin.mq("pc"){

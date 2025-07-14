@@ -189,7 +189,7 @@ span{
 }
 // 電話番号
 .bl_cta_tel{
-    font-size: 32px;
+    font-size: clamp(32px, 3vw, 48px);
     font-weight: 800;
     letter-spacing: 0.03em;
     font-family: g.$font-family-en;
@@ -210,7 +210,6 @@ span{
 @include mixin.mq("pc"){
     .bl_cta_tel{
         justify-content: center;
-        font-size: 48px;
     }
     .bl_cta_tel::before{
         content: url(../img/cta_tel_ico_pc.svg);
@@ -366,8 +365,14 @@ span{
 .el_btn_cta:hover{
     opacity: 0.7;
 }
+@include mixin.mq("tab") {
+    .el_btn_cta{
+        width: 60%;
+    }
+}
 @include mixin.mq("pc"){
     .el_btn_cta{
+        width: 100%;
         padding: 20px 24px;
         font-size: 24px;
     }
