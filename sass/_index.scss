@@ -194,6 +194,7 @@
 
     img{
         width: 100%;
+        height: auto;
     }
 }
 @include mixin.mq("tab") {
@@ -264,6 +265,7 @@
     width: 30%;
     img{
         width: 100%;
+        height: auto;
     }
 }
 @include mixin.mq("tab"){
@@ -280,6 +282,7 @@
 
     img{
         width: 100%;
+        height: auto;
     }
 }
 .bl_worriers_txtGroup::before{
@@ -533,6 +536,7 @@
 
     img{
         width: 100%;
+        height: auto;
     }
 }
 @include mixin.mq("tab"){

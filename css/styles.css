@@ -793,6 +793,7 @@ span {
 }
 .bl_kv_img img {
   width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -862,6 +863,7 @@ span {
 }
 .bl_worriers_img img {
   width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -877,6 +879,7 @@ span {
 }
 .bl_worriers_txtGroup img {
   width: 100%;
+  height: auto;
 }
 
 .bl_worriers_txtGroup::before {
@@ -1120,6 +1123,7 @@ span {
 }
 .bl_service_listItem_img img {
   width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {
